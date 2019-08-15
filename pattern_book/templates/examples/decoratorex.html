@@ -1,0 +1,110 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Regualar Classes</h4></td>
+                </tr>
+                <tr>
+                        <td>public interface Letter</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void write();</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+		<tr>
+                        <td>public class A implements Letter</td>
+		</tr>
+		<tr>
+        	        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void write()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Letter: A");</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+			<td colspan="3" style="text-align: center"><h4>Decorator Classes<h4></tr>
+		</tr>
+		<tr>
+                        <td>public BoldDecorator extends Decorator</td>
+			<td width="7%"></td>
+                        <td>public abstract class Decorator implements Letter</td>
+                </tr>
+		<tr>
+                        <td>{</td>
+			<td width="7%"></td>
+                        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public BoldDecorator(Letter decoratedLetter)</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;protected Letter decoratedLetter;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;public Decorator(Letter decoratedLetter)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;super(decoratedLetter);</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.decoratedLetter = decoratedLetter;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;@Override</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;}</td>				
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void draw()</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;public void write()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Letter is bold");</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;decoratedLetter.write();</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+			<td width="7%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+			<td width="7%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>
+

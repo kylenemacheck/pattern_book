@@ -1,0 +1,204 @@
+<div>
+	<table style= "margin-left: auto; margin-right: auto">
+        	<tr style="border-bottom: 1pt solid white;">
+	                <td><h4>Before use of pattern</h4></td>
+        	        <td width="10%"></td>
+                	<td><h4>After use of pattern</h4></td>
+		</tr>
+		<tr>
+			<td>public class Membership</td>
+			<td width="10%"></td>
+			<td>public class MembershipBuilder</td>
+		</tr>
+		<tr>
+			<td>{</td>
+			<td width="10%"></td>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;private String firstName;</td>
+			<td width="10%"></td>
+			<td>&emsp;&emsp;private String firstName;</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;private String lastName;</td>
+			<td width="10%"></td>
+			<td>&emsp;&emsp;private String lastName;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private int age;</td>
+			<td width="10%"></td>
+			<td>&emsp;&emsp;private int age;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private String type;</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;private String type;</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;public Membership(String firstName, String lastName, int age, String type)</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;public MembershipBuilder()</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;{</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.fistName = firstName;</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;}</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.lastName = lastName;</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;public MembershipBuilder setFirstName(String firstName)</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.age = age;</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;{</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.type = type;</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;&emsp;&emsp;this.firstName = firstName;</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;&emsp;&emsp;return this;<td>
+		</tr>
+		<tr>
+                        <td>}</td>
+                	<td width="10%"></td>
+			<td>&emsp;&emsp;}</td>
+		</tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public MemberBuilder setLastName(String lastName)</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.lastName = lastName;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;return this;<td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+ 		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public MemberBuilder setAge(int age)</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.age = age;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;return this;<td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public MemberBuilder setType(String type)</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.type = type;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;return this;<td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public MemberBuilder build()</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;MembershipBuilder membership = new MembershipBuilder();</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;membership.firstName = this.firstName;<td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;membership.lastName = this.lastName;<td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;membership.age = this.age;<td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;membership.type = this.type;<td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;return membership;<td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>

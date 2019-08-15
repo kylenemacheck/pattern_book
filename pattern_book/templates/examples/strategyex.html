@@ -1,0 +1,80 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Strategy Abstract Class.</h4></td>
+                </tr>
+                <tr>
+                        <td>pubic abstract class Strategy</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public abstract String write(String a, String b);</td>
+                </tr>
+                <tr>
+                        <td>}</td>
+                </tr>
+        </table>
+	<br>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td colspan="3"><h4>Implementing Class.</h4></td>
+                </tr>
+		<tr>
+                        <td>public class Concatenate extends Strategy</td>
+                        <td width="10%"></td>
+                        <td>public class Larger extends Strategy</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;@Override</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public String write(String a, String b)</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public String write(String a, String b)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return a + b;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;if (a.length() > b.length())</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return a;</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;if (a.length() < b.length())</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;return b;</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>	
+</div>

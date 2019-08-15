@@ -1,0 +1,74 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr>
+                        <td>public interface Time</td>
+                        <td width="10%"></td>
+                        <td>public interface TimeVisitor</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void accept(TimeVisitor);</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void visit(Second second);</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void visit(Minute minute);</td>
+                </tr>
+		<tr>
+                        <td>public class /* ClassName */ implements Time</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void visit(Hour hour);</td>
+                </tr>
+		<tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;@Override</td>
+                        <td width="10%"></td>
+                        <td>public class TimeDisplayVisitor implements TimeVisitor</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;public void accept(TimeVisitor visitor)</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;visitor.visit(this);</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;pubic void visit( /*ClassName name*/ )</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Stuff");</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>

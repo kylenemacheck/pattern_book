@@ -1,0 +1,85 @@
+<div>
+<table style= "margin-left: auto; margin-right: auto">
+	<tr style="border-bottom: 1pt solid white;">
+                <th style="text-align: center" colspan= "2"><h4>Before Pattern Use.</h4></th>
+        </tr>
+	</tr>
+        <tr>
+                <td>public class Cup</td>
+        </tr>
+        <tr>
+                <td>{</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;public void make(Handle handle, Stem stem)</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;{</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;&emsp;&emsp;if (stem != null)</td>
+        </tr>
+	<tr>
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Makes a Coffe Cup");</td>
+        </tr>
+	<tr>
+                <td>&emsp;&emsp;&emsp;&emsp;else if (handle != null)</td>
+        </tr>
+	<tr>
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Makes a Wine Glass");</td>
+        </tr>
+	<tr>
+                <td>&emsp;&emsp;&emsp;&emsp;else</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Not a Cup");</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;}</td>
+        </tr>
+        <tr>
+                <td>}</td>
+        </tr>
+</table>
+<br>
+<table style= "margin-left: auto; margin-right: auto">
+        <tr style="border-bottom: 1pt solid white;">
+		<th style="text-align: center" colspan= "3"><h4>After Pattern Use.</h4></th>
+	</tr>
+        <tr>
+                <td>public class CoffeeCup extents Cup</td>
+		<td width="10%"></td>
+                <td>public class WineGlass extends Cup</td>
+        </tr>
+        <tr>
+                <td>{</td>
+		<td width="10%"></td>
+                <td>{</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;public void make(Handle handle)</td>
+		<td width="10%"></td>
+                <td>&emsp;&emsp;public void make(Stem stem)</td>
+        </tr>
+        <tr>
+                <td>&emsp;&emsp;{</td>
+		<td width="10%"></td>
+                <td>&emsp;&emsp;{</td>
+        </tr>
+        <tr>	
+		<td>&emsp;&emsp;&emsp;&emsp;System.out.println("Makes a Coffee Cup");</td>
+		<td width="10%"></td>
+		<td>&emsp;&emsp;&emsp;&emsp;System.out.println("Makes a Wine Glass");</td>
+	</tr>
+	<tr>
+                <td>&emsp;&emsp;}</td>
+		<td width="10%"></td>
+                <td>&emsp;&emsp;}</td>
+        </tr>
+	<tr>
+                <td>}</td>
+		<td width="10%"></td>
+                <td>}</td>
+        </tr>
+</table>
+</div>

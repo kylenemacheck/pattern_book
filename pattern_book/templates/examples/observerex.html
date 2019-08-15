@@ -1,0 +1,188 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Observer Class</h4></td>
+                </tr>
+		<tr>
+			<td>public abstract class Listener</td>
+		</tr>
+		<tr>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;public Address address;</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;public abstract update();</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto"><table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Model Class</h4></td>
+                </tr>
+		<tr>
+                        <td>public class Address</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;private List&lt;Listener&gt; listeners = new ArrayList&lt;&gt;();</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;private String state;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private String city;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private String street;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public String getState()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return state;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void setState(String state)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.state = state;</td>
+                </tr>
+		<tr>
+                       <td>&emsp;&emsp;&emsp;&emsp;notifyListeners();</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public String getCity()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return city;</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void setCity(String city)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.city = city;</td>
+                </tr>
+		<tr>
+                       <td>&emsp;&emsp;&emsp;&emsp;notifyListeners();</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public String getSteet()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return street;</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void setSteet(String street)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.street = street;</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;notifyListeners();</td>
+		</tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private void notifyListeners()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;for (Listener listener: listeners)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;listener.update();</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+                <tr>
+                        <td>}</td>
+                </tr>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Implementing Class</h4></td>
+                </tr>
+                <tr>
+                        <td>public class AddressKyle extends Listener</td>
+                </tr>
+		<tr>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;puboic AddressKyle(Address address)</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;this.address = address;</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.address.add(this);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void update()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;System.out.println(address.getState()+", "+address.getCity()+", "+ address.getStreet());
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>

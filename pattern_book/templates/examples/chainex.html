@@ -1,0 +1,153 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr>
+			<td>public class Request</td>
+                        <td width="10%"></td>
+                        <td>public abstract class Handler</td>
+                </tr>
+		<tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;private in value;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public abstract void handleRequest(Request request);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public Request(in value)</td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.value = value;</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public int getValue()</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return value;</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td></td>
+                </tr>
+        </table>
+        <br>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td colspan= "3"><h4>Chain handler classes.</h4></td>
+                </tr>
+                <tr>
+                        <td>public class One extends Handler</td>
+                        <td width="10%"></td>
+                        <td>public class Two extents Handler</td>
+	       	</tr>
+		<tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void handleRequest(Request request)</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void handleRequest(Request request)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;if (request.getValue() == 1)</td>
+                        <td width="10%"></td>
+			<td>&emsp;&emsp;&emsp;&emsp;if (request.getValue() == 1)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("One");</td>
+                        <td width="10%"></td>
+			<td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Two");</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;else</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;else</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;super.handleRequest(request);</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;super.handleRequest(request);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+			<td>}</td>
+                        <td width="10%"></td>
+                        <td>}</td>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td colspan= "2"><h4>Demo.</h4></td>
+                </tr>
+                <tr>
+                        <td>public class Main</td>
+		</tr>
+		<tr>
+                        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public static void main(String[] args)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;handler h1 = new one();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;handler h2 = new two();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;handler h3 = new three();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;h1.handleRequest(new Request(2));</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;h2.handleRequest(new Request(1));</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>

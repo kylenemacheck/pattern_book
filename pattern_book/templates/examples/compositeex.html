@@ -1,0 +1,117 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+			<td><h4>Interface</h4></td>
+                        <td width="5%"></td>
+                        <td><h4>Multiple Objects</h4></td>
+			<td width="5%"></td>
+                        <td><h4>Individual Objects</h4></td>
+                </tr>
+                <tr>
+			<td>public interface Untensil</td>
+                        <td width="5%"></td>
+                        <td>public class CompositeUtensil implements Utensil</td>
+                        <td width="5%"></td>
+                        <td>public class Spoon implements Utensil</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+			<td width="5%"></td>
+			<td>{</td>
+			<td width="5%"></td>
+			<td>{</td>
+                </tr>
+                <tr>
+			<td>&emsp;&emsp;public void setType(String type);</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;private final List&lt;Utensil&gt; utensils =  new ArrayList&lt;&gt;();</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;public void print();</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;public void add(Utensil utensil)</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;public void print()</td>
+		</tr>
+		<tr>
+                        <td>}</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;utensil.add(utensil);</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Spoon");</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                        <td width="5%"></td>
+                        <td>}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;public void print()</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;for (Utensil utensil: utensils)</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;utensil.print();</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td></td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+		<tr>
+			<td></td>
+			<td width="5%"></td>
+                        <td>}</td>
+                        <td width="5%"></td>
+                        <td></td>
+                </tr>
+
+	</table>
+</div>

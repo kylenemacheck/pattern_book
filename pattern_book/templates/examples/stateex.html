@@ -1,0 +1,146 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>State Interface</h4></td>
+                </tr>
+                <tr>
+                        <td>pubic interface state</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void push(Button button);</td>
+                </tr>
+                <tr>
+                        <td>}</td>
+                </tr>
+        </table>
+        <br>
+	<table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Initializer Class</h4></td>
+                </tr>
+                <tr>
+                        <td>public class Button</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;private State state;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public Button()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;state = Rest();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void setState(State state)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.state = state;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void push()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;state.push(this);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+                <tr>
+                        <td>}</td>
+                </tr>
+        </table>
+	<br>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Other Classes</h4></td>
+                </tr>
+                <tr>
+                        <td>public class Rest implements State</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public void push(Button button)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;button.setState(new Single());</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Single Push.");</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+	<br>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr>
+                        <td>public class Single implements State</td>
+                        <td width="10%"></td>
+                        <td>public class Double implements State</td>
+                </tr>
+		<tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void push(Button button)</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void push(Button button)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>			
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;button.setState(new Double());</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;button.setState(new Rest());</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Double Push.");</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Not Pushed");</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+<div>

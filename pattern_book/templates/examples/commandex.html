@@ -1,0 +1,185 @@
+<div>
+	<table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+			<td><h4>Interface</h4></td>
+		</tr>
+		<tr>
+			<td>pubic interface Door</td>
+		</tr>
+		<tr>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;public void execute();</td>
+		</tr>
+		<tr>
+			<td>}</td>
+		</tr>
+	</table>
+	<br>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+			<td colspan= "3"><h4>Other Classes</h4></td>
+		</tr>
+		<tr>
+                        <td>public class Person</td>
+                        <td width="10%"></td>
+                        <td>public class DoorOperation</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public Person()</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void open()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Open Door");</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void doOperation(Door door)</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void close()</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;door.execute();</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Close Door");</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td></td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+                <tr>
+			<td>public class OpenDoor extends Order</td>
+			<td width="10%"></td>
+                        <td>public class CloseDoor extends Order</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                        <td width="10%"></td>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;private DoorOperation operation;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;private DoorOperation operation;</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public OpenDoor(DoorOperation operation)</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public CloseDoor(DoorOperation operation)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.operation = operation;</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;this.operation = operation;</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public void execute()</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;public void execute()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;operation.open()</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;operation.close()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                        <td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                        <td width="10%"></td>
+                        <td>}</td>
+                </tr>
+        </table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Demo</h4></td>
+                </tr>
+                <tr>
+                        <td>public class Test</td>
+                </tr>
+                <tr>
+                        <td>{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;public static void(String[] args)</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;DoorOperation operation = new DoorOperation();</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;&emsp;&emsp;OpenDoor open = new OpenDoor(operation);</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;CloseDoor open = new CloseDoor(operation);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;Person person = new Person();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;person.doOperation(open);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;person.doOperation(close);</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+			<td>}</td>
+		</tr>
+	</table>
+</div>

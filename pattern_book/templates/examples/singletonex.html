@@ -1,0 +1,46 @@
+<div>
+        <table style= "margin-left: auto; margin-right: auto">
+                <tr style="border-bottom: 1pt solid white;">
+                        <td><h4>Single Instance class</h4></td>
+                </tr>
+		<tr>
+			<td>pubic class Connection</td>
+		</tr>
+		<tr>
+			<td>{</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;private static Connection conn = new Connection();</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;private Connection()</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public static Connection getConnection()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;if (conn == null)</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;conn = new Connection();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;return conn;</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>

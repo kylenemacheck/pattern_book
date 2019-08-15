@@ -1,0 +1,192 @@
+	<div>
+        	<table style= "margin-left: auto; margin-right: auto">
+                	<tr style="border-bottom: 1pt solid white;">
+                	        <td><h4>Regualar Classes</h4></td>
+                	</tr>
+                	<tr>
+                	        <td>public interface cookie</td>
+                	</tr>
+                	<tr>
+                	        <td>{</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;public void bake();</td>
+                	</tr>
+                	<tr>
+                	        <td>}</td>
+                	</tr>
+                	<tr>
+                	        <td>public class ChoclateChip implements Cookie</td>
+                	</tr>
+                	<tr>
+                	        <td>{</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;public void bake()</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;{</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Choclate chip cookie is ready.");</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+			<tr>
+                	        <td>}</td>
+                	</tr>
+			<tr>
+                	        <td>public class Snickerdoodle implements Cookie</td>
+                	</tr>
+                	<tr>
+                	        <td>{</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;public void bake()</td>
+                	</tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;{</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Snickerdoodle cookie is ready.");</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;}</td>
+        	        </tr>
+        	        <tr>
+        	                <td>}</td>
+        	        </tr>
+			<tr>
+        	                <td>public class DoubleChoclate implements Cookie</td>
+        	        </tr>
+        	        <tr>
+        	                <td>{</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;public void bake()</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;{</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Double choclate cookie is ready.");</td>
+        	        </tr>
+        	        <tr>
+        	                <td>&emsp;&emsp;}</td>
+        	        </tr>
+			<tr>
+        	                <td>}</td>
+        	        </tr>
+		</table>
+		<table style= "margin-left: auto; margin-right: auto">
+			<tr style="border-bottom: 1pt solid white;">
+                	        <td><h4>Facade Class</h4></td>
+                	</tr>
+			<tr>
+				<td>public class Oven</td>
+			</tr>
+			<tr>
+                	        <td>{</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;private Cookie choclateChip;</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;private Cookie snickerdoodle;</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;private Cookie doubleChoclate;</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;public Oven()</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;{</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;choclateChip = new ChoclateChip();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;snickerDoodle = new Snickerdoodle();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;doubleChoclate = new DoubleChoclate();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;public void bakeChoclateChip()</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;{</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;choclateChip.bake();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;public void bakeSnickerdoodle()</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;{</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;snickerdoodle.bake();</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+			<tr>
+               		        <td>&emsp;&emsp;public void bakeDoubleChoclate()</td>
+               		</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;{</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;doubleChoclate.bake();</td>
+                	</tr>
+                	<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+                	<tr>
+                	        <td>}</td>
+                	</tr>
+			<tr style="border-bottom: 1pt solid white;">
+                                <td><h4>Demo</h4></td>
+                        </tr>
+			<tr>
+				<td>public class BakingTime</td>
+			</tr>
+			<tr>
+                 	       	<td>{</td>
+        	        </tr>
+			<tr>
+        	                <td>&emsp;&emsp;public static void main(String[] args)</td>
+        	        </tr>
+			<tr>
+	                        <td>&emsp;&emsp;{</td>
+	                </tr>
+			<tr>
+		                <td>&emsp;&emsp;&emsp;&emsp;Oven oven = new Oven();</td>
+	                </tr>
+			<tr>
+	                        <td>&emsp;&emsp;&emsp;&emsp;oven.drawChoclateChip();</td>
+	                </tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;oven.drawSnickerdoodle();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;&emsp;&emsp;oven.drawDoubleChoclate();</td>
+                	</tr>
+			<tr>
+                	        <td>&emsp;&emsp;}</td>
+                	</tr>
+			<tr>
+                	        <td>}</td>
+                	</tr>
+		</table>
+	</div>

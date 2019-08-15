@@ -1,0 +1,142 @@
+<div>
+	<table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+                	<th style="text-align: center" colspan= "2"><h4>Template Class</h4></th>
+        	</tr>
+		<tr>
+			<td>public abstract class Clothes</td>			
+	        </tr>
+		<tr>
+			<td>{</td>
+		</tr>
+		<tr>
+			<td>&emsp;&emsp;public abstract void material();</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;public abstract void size();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public abstract void item();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;public final void make()</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;material();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;item();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;size();</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;}</td>
+		</tr>
+		<tr>
+			<td>}</td>
+		</tr>
+	</table>
+	<br>
+	<table style= "margin-left: auto; margin-right: auto">
+		<tr style="border-bottom: 1pt solid white;">
+                        <th style="text-align: center" colspan= "3"><h4>Extention Classes</h4></th>
+                </tr>
+                <tr>
+                        <td>public class Shirt extends Clothes</td>
+			<td width="10%"></td>
+			<td>public class Pants extents Clothes</td>
+                </tr>
+		<tr>
+			<td>{</td>
+			<td width="10%"></td>
+			<td>{</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;@Override</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+
+		<tr>
+			<td>&emsp;&emsp;public void material()</td>
+			<td width="10%"></td>
+			<td>&emsp;&emsp;public void material()</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;{</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Cotton");</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Denim");</td>
+                </tr>
+		<tr>
+			<td>&emsp;&emsp;}</td>
+			<td width="10%"></td>
+			<td>&emsp;&emsp;}</td>
+		</tr>
+		<tr>
+                        <td>&emsp;&emsp;@Override</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+
+                <tr>
+                        <td>&emsp;&emsp;public void item()</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;public void item()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Tee Shirt");</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Jeans");</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+		<tr>
+                        <td>&emsp;&emsp;@Override</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;@Override</td>
+                </tr>
+
+                <tr>
+                        <td>&emsp;&emsp;public void size()</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;public void size()</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;{</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;{</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("Medium");</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;&emsp;&emsp;System.out.println("30x32");</td>
+                </tr>
+                <tr>
+                        <td>&emsp;&emsp;}</td>
+			<td width="10%"></td>
+                        <td>&emsp;&emsp;}</td>
+                </tr>
+                <tr>
+                        <td>}</td>
+			<td width="10%"></td>
+                        <td>}</td>
+                </tr>
+	</table>
+</div>
